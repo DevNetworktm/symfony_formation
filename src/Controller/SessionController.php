@@ -22,6 +22,6 @@ class SessionController extends AbstractController
 
         $session->set('nbVisite', $nbVisite);
 
-        return $this->render('session/index.html.twig');
+        return $this->render('views/session/index.html.twig');
     }
 }

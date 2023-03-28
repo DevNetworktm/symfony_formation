@@ -1,0 +1,25 @@
+{% extends 'layouts/layout.admin.html.twig' %}
+
+{% block title %} Tabs List User | Admin {% endblock %}
+{% block titleContent %} Tabs List User {% endblock %}
+
+{% block content %}
+    {{ include('components/component.date.html.twig') }}
+    <table class="table">
+        <tr class="table-active">
+            <td>Prénom</td>
+            <td>Nom</td>
+            <td>Âge</td>
+            <td>Message</td>
+        </tr>
+        {% for user in users %}
+            <tr class="table-{% if loop.index is odd %}danger{% else %}warning{% endif %}">
+                <td>{{ user.firstname }}</td>
+                <td>{{ user.lastname }}</td>
+                <td>{{ user.age }}</td>
+                <td>{{ render(controller('App\\Controller\\FirstController::sayHelloComp', {'firstname': user.firstname, 'name': user.lastname })) }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+{% endblock %}
+

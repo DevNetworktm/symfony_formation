@@ -9,6 +9,7 @@
 </head>
 <body>
 <main>
+    <img style="width: 150px" src="{{ asset('assets/images/') ~ path | defaultImage }}" alt="">
     <p>{{ "now" | date("d/m/Y") }}</p>
     <h1>Hello {{ name | capitalize }} {{ firstname | capitalize }}</h1>
 </main>

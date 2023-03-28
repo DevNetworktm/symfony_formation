@@ -25,7 +25,7 @@ class TodoController extends AbstractController
             $this->addFlash('info', "La liste des todos viens d'être initialiser !");
         }
 
-        return $this->render('todo/index.html.twig');
+        return $this->render('views/todo/index.html.twig');
     }
 
     #[Route(
